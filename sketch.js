@@ -92,6 +92,14 @@ function draw() {
   checkAudioTime();
 }
 
+function touchStarted() {
+  if (audio.isPlaying()) {
+    //Do nothing
+  } else {
+    audio.play();
+  }
+}
+
 function mousePressed() {
   if (audio.isPlaying()) {
     //
@@ -104,14 +112,6 @@ function mousePressed() {
 function mouseClicked() {
   if (audio.isPlaying()) {
     //
-  } else {
-    audio.play();
-  }
-}
-
-function touchStarted() {
-  if (audio.isPlaying()) {
-    //Do nothing
   } else {
     audio.play();
   }
@@ -541,8 +541,6 @@ function startPart(value) {
 }
 
 function checkAudioTime() {
-  print(round(audio.currentTime(), 0));
-
   if (round(audio.currentTime(), 0) == 6) {
     startPart(1);
   }
