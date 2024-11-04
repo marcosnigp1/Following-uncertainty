@@ -110,7 +110,7 @@ class Boid {
       );
       if (other != this && d < perceptionRadius) {
         let diff = p5.Vector.sub(this.position, other.position);
-        diff.div(d);
+        //diff.div(d);
         steering.add(diff);
         total++;
       }
