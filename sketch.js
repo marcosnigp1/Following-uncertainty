@@ -100,6 +100,15 @@ function mousePressed() {
   }
 }
 
+//For some reason it will not respond to touches on mobile if I do not copy it like this.
+function mouseClicked() {
+  if (audio.isPlaying()) {
+    //
+  } else {
+    audio.play();
+  }
+}
+
 function touchStarted() {
   if (audio.isPlaying()) {
     //Do nothing
