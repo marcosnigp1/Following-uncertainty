@@ -17,7 +17,7 @@ let spectrum;
 let part = 0;
 
 function preload() {
-  audio = loadSound("media/song.m4a");
+  audio = new loadSound("media/song.m4a");
 }
 
 function setup() {
