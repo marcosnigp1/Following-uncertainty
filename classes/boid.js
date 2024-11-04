@@ -60,7 +60,7 @@ class Boid {
     }
     if (total > 0) {
       //Here we are going to implement the steering formula.
-      //steering.div(total);
+      steering.div(total);
       steering.setMag(this.maxSpeed);
       steering.sub(this.velocity);
       steering.limit(this.maxForce);
@@ -87,7 +87,7 @@ class Boid {
     }
     if (total > 0) {
       //Here we are going to implement the steering formula.
-      //steering.div(total);
+      steering.div(total);
       steering.sub(this.position);
       steering.setMag(this.maxSpeed);
       steering.sub(this.velocity);
@@ -110,14 +110,14 @@ class Boid {
       );
       if (other != this && d < perceptionRadius) {
         let diff = p5.Vector.sub(this.position, other.position);
-        ///diff.div(d);
+        diff.div(d);
         steering.add(diff);
         total++;
       }
     }
     if (total > 0) {
       //Here we are going to implement the steering formula.
-      //steering.div(total);
+      steering.div(total);
       steering.setMag(this.maxSpeed);
       steering.sub(this.velocity);
       steering.limit(this.maxForce);
