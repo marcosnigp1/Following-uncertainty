@@ -22,6 +22,7 @@ function preload() {
 
 function setup() {
   //Variables for visualizer
+  frameRate(60);
   angleMode(RADIANS);
   fft = new p5.FFT(0.9, 512);
   visualizer = new Visualizer();
