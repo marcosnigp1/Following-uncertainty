@@ -92,12 +92,15 @@ function draw() {
   checkAudioTime();
 }
 
+//Please work.
 function touchStarted() {
-  if (audio.isPlaying()) {
-    //Do nothing
-  } else {
-    audio.play();
-  }
+  mouseClicked();
+  return false;
+}
+
+function touchMoved() {
+  mouseClicked();
+  return false;
 }
 
 function mousePressed() {
