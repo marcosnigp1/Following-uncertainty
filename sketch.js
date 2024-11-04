@@ -100,6 +100,14 @@ function mousePressed() {
   }
 }
 
+function touchStarted() {
+  if (audio.isPlaying()) {
+    //Do nothing
+  } else {
+    audio.play();
+  }
+}
+
 //Used as testing grounds.
 function keyPressed() {
   if (key === "z") {
